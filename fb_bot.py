@@ -39,20 +39,25 @@ print("Password entered...")
 button = driver.find_element_by_xpath("//input[@id='u_0_w']")
 button.click()
 time.sleep(2)
+print 'Logged in...'
 
 #Open the message dialog box by clicking on message symbol
 message = driver.find_element_by_xpath("//div[@class='uiToggle _4962 _1z4y']")
 message.click()
 time.sleep(2)
 
+
 #Click on the name of the person/group who want to message. This will open the message box.
 tomatoes = driver.find_element_by_xpath("//*[text()='Tomatoes']") #'Tomatoes is the name of recipient of the message'
 tomatoes.click()
+print 'Open message box...'
 time.sleep(2)
 
 #This will enter the message and send.
 msg = driver.find_element_by_xpath("//div[@class='_5rpu']")
 msg.send_keys('I am Mr. BOT. Say hi...') #message to be sent
 msg.send_keys(Keys.ENTER)
+print 'Message Sent...'
 time.sleep(2)
+
 
